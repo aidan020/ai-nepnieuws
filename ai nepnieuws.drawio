@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 OPR/131.0.0.0">
+  <diagram name="Pagina-1" id="7Z2QcYfb5dx2v-rDHHWt">
+    <mxGraphModel dx="1037" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-15" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-51" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-50" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AI en nepnieuws" vertex="1">
+          <mxGeometry height="40" width="90" x="369" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-59" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-58" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AI" vertex="1">
+          <mxGeometry height="40" width="90" x="120" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-55" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-54" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-57" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-56" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-50" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;nepnieuws" vertex="1">
+          <mxGeometry height="40" width="90" x="500" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-66" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-65" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="waarom bestaat het" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-56" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="kenmerken" vertex="1">
+          <mxGeometry height="40" width="90" x="410" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-61" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-60" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="wat is AI" vertex="1">
+          <mxGeometry height="40" width="90" x="120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-63" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-62" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-60" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="hoe helpt het" vertex="1">
+          <mxGeometry height="40" width="90" x="120" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="is het handig" vertex="1">
+          <mxGeometry height="40" width="90" x="210" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-64" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="BOnTl4uvFxnQckXWG3JC-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-68" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-67" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-65" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="sensationele TItels" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-70" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-69" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-67" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="geen bron" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-72" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-71" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Emotionele taal" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-74" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-73" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Slechte kwaliteit" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-76" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-75" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="clicks genereren" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-78" edge="1" parent="1" source="BOnTl4uvFxnQckXWG3JC-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BOnTl4uvFxnQckXWG3JC-77" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="mensen misleiden" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="BOnTl4uvFxnQckXWG3JC-77" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="of in verwarring brengen" vertex="1">
+          <mxGeometry height="40" width="90" x="590" y="1190" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
