@@ -1,11 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikelen – AI Nepnieuws Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" style="text-decoration:none;">
+      <div class="logo-text">AI Nepnieuws Info</div>
+      <div class="logo-sub">Herken en begrijp AI desinformatie</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="artikelen.html" class="active">Artikelen</a></li>
+      <li><a href="vergelijking.html">Vergelijking</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Informatie Artikelen</h1>
+    <p>Verdiep je kennis over AI-desinformatie, deepfakes en detectietechnieken.</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="alle">Alle</button>
+    <button class="filter-btn" data-filter="deepfakes">Deepfakes</button>
+    <button class="filter-btn" data-filter="ai-teksten">AI Teksten</button>
+    <button class="filter-btn" data-filter="detectie">Detectie</button>
+    <button class="filter-btn" data-filter="social-media">Social Media</button>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="section">
+    <div class="section-title">Alle Artikelen</div>
+
+    <div class="articles-grid">
+
+      <a href="artikelen/deepfakes.html" class="article-card" data-category="deepfakes">
+        <div class="article-thumb">
+          <span class="thumb-label">Deepfakes</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Deepfakes & Manipulatie</div>
+          <div class="article-title">Hoe deepfakes de grens vervagen tussen echt en nep</div>
+          <div class="article-desc">AI-gegenereerde video's worden steeds realistischer. Leer hoe je visuele manipulatie kunt herkennen aan gezichtsranden, oogbewegingen en lichtval.</div>
+          <div class="article-footer">
+            <span class="article-meta">8 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/ai-teksten.html" class="article-card" data-category="ai-teksten">
+        <div class="article-thumb">
+          <span class="thumb-label">AI Teksten</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">AI-Gegenereerde Teksten</div>
+          <div class="article-title">Kenmerken van door AI geschreven nieuwsartikelen</div>
+          <div class="article-desc">Taalmodellen produceren vloeiende maar inhoudloze teksten. Ontdek de patronen en signalen die verraden dat een artikel niet door een mens is geschreven.</div>
+          <div class="article-footer">
+            <span class="article-meta">6 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/sociale-media-bots.html" class="article-card" data-category="social-media">
+        <div class="article-thumb">
+          <span class="thumb-label">Social Media</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Sociale Media Bots</div>
+          <div class="article-title">Geautomatiseerde accounts en de verspreiding van nepnieuws</div>
+          <div class="article-desc">Botnetwerken versterken desinformatie door massale verspreiding. Leer hoe je een bot-account onderscheidt van een echte gebruiker.</div>
+          <div class="article-footer">
+            <span class="article-meta">5 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/detectie-tools.html" class="article-card" data-category="detectie">
+        <div class="article-thumb">
+          <span class="thumb-label">Detectie</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Detectie Tools</div>
+          <div class="article-title">Overzicht van de beste AI-detectiesoftware in 2026</div>
+          <div class="article-desc">Van reverse image search tot gespecialiseerde deepfake-detectoren: een vergelijking van de meest betrouwbare tools die vrij beschikbaar zijn.</div>
+          <div class="article-footer">
+            <span class="article-meta">10 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/ai-propaganda.html" class="article-card" data-category="ai-teksten">
+        <div class="article-thumb">
+          <span class="thumb-label">AI Teksten</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">AI-Gegenereerde Teksten</div>
+          <div class="article-title">AI-propaganda: hoe algoritmes meningen vormen</div>
+          <div class="article-desc">Gerichte AI-content wordt ingezet om politieke opvattingen te beïnvloeden. Leer hoe geautomatiseerde propaganda werkt en hoe je het herkent.</div>
+          <div class="article-footer">
+            <span class="article-meta">7 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/social-media-verspreiding.html" class="article-card" data-category="social-media">
+        <div class="article-thumb">
+          <span class="thumb-label">Social Media</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Sociale Media</div>
+          <div class="article-title">Hoe nepnieuws viraal gaat op sociale platforms</div>
+          <div class="article-desc">Algoritmes belonen engagement boven waarheid. Ontdek waarom nepnieuws sneller verspreidt dan correcties en wat platforms eraan doen.</div>
+          <div class="article-footer">
+            <span class="article-meta">6 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/detectie-methodes.html" class="article-card" data-category="detectie">
+        <div class="article-thumb">
+          <span class="thumb-label">Detectie</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Detectie Tools</div>
+          <div class="article-title">Vijf stappen om nepnieuws zelf te controleren</div>
+          <div class="article-desc">Een praktische methode voor het controleren van bronnen, auteurs, publicatiedatums en visueel bewijs bij verdachte nieuwsberichten.</div>
+          <div class="article-footer">
+            <span class="article-meta">5 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/ai-teksten-herkennen.html" class="article-card" data-category="ai-teksten">
+        <div class="article-thumb">
+          <span class="thumb-label">AI Teksten</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">AI-Gegenereerde Teksten</div>
+          <div class="article-title">Waarom AI-teksten zo overtuigend klinken</div>
+          <div class="article-desc">Grote taalmodellen genereren vloeiende tekst zonder begrip van waarheid. Leer welke taalpatronen wijzen op AI-generatie.</div>
+          <div class="article-footer">
+            <span class="article-meta">6 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="artikelen/social-media-bots-herkennen.html" class="article-card" data-category="social-media">
+        <div class="article-thumb">
+          <span class="thumb-label">Social Media</span>
+        </div>
+        <div class="article-body">
+          <div class="article-category">Sociale Media</div>
+          <div class="article-title">Hoe herken je een botaccount op X of Instagram?</div>
+          <div class="article-desc">Nepaccounts worden steeds geloofwaardiger. Leer de signalen herkennen: profielfoto's, posting-patronen en volgersverhouding.</div>
+          <div class="article-footer">
+            <span class="article-meta">4 min leestijd</span>
+            <span class="article-link">Lees meer →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2026 AI Nepnieuws Monitor &mdash; Educatieve informatiebron
+  </footer>
+
+  <script src="../js/filter.js"></script>
+
 </body>
 </html>
