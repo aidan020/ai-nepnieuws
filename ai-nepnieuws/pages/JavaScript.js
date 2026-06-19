@@ -1,66 +1,164 @@
-const cards = document.querySelectorAll('.article-card');
-const buttons = document.querySelectorAll('.filter-btn');
+const quiz = [
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+{
+source: "GezondNieuws.nl | 2026",
+title: "Revolutionair medicijn geneest diabetes in 2 weken",
+text: "Wetenschappers claimen dat een nieuw medicijn diabetes type 2 volledig geneest. Farmaceuten zouden dit geheim houden.",
+fake: true,
+explanation: "Dit is nepnieuws. Onrealistische claim en complottheorie."
+},
 
-    const filter = btn.dataset.filter;
+{
+source: "NU.nl | 2026",
+title: "Kabinet presenteert nieuw klimaatbeleid",
+text: "Na maanden overleg presenteert het kabinet nieuwe klimaatmaatregelen.",
+fake: false,
+explanation: "Dit is echt nieuws. Neutrale toon en betrouwbare bron."
+},
 
-    cards.forEach(card => {
-      if (filter === 'alle' || card.dataset.category === filter) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
-let score = 0;
-let answered = 0;
+{
+source: "@PolitiekAlert",
+title: "EXCLUSIEF: Minister bekende alles",
+text: "Deel dit NU! Dit bewijst dat de overheid jarenlang heeft gelogen.",
+fake: true,
+explanation: "Nepnieuws gebruikt vaak emotionele taal en geen bronnen."
+},
 
-function startQuiz() {
-  document.getElementById('quiz-container').style.display = 'block';
-  document.querySelector('.section').style.display = 'none';
+{
+source: "NOS | 2026",
+title: "Nieuwe pandemiewet besproken in Tweede Kamer",
+text: "De Tweede Kamer bespreekt nieuwe maatregelen. Experts zijn verdeeld.",
+fake: false,
+explanation: "Echt nieuws bevat meestal nuance en meerdere standpunten."
+},
+
+{
+source: "WetenschapDaily.com",
+title: "SHOCKING: Vaccins werken helemaal niet meer",
+text: "De overheid zou dit verbergen voor de bevolking.",
+fake: true,
+explanation: "Alarmistische taal en complottheorie zijn typische kenmerken van nepnieuws."
 }
 
-function checkAnswer(questionNum, isCorrect) {
-  const feedback = document.getElementById('feedback-' + questionNum);
-  feedback.style.display = 'block';
-  
-  if (isCorrect) {
-    score++;
-    feedback.style.borderLeftColor = '#27ae60';
-    feedback.innerHTML = feedback.innerHTML.replace('<strong>Goed!</strong>', '<strong>Goed!</strong>');
-  }
-  
-  const buttons = feedback.previousElementSibling.querySelectorAll('button');
-  buttons.forEach(btn => {
-    btn.disabled = true;
-    btn.style.opacity = '0.5';
-    btn.style.cursor = 'default';
-  });
-  
-  answered++;
-  
-  if (answered === 5) {
-    setTimeout(() => {
-      document.getElementById('result').style.display = 'block';
-      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-      
-      const resultTitle = document.getElementById('result-score');
-      const resultText = document.getElementById('result-text');
-      
-      resultTitle.textContent = score + ' / 5';
-      
-      if (score === 5) {
-        resultText.textContent = 'Uitstekend! Je herkent AI-nepnieuws feilloos.';
-      } else if (score >= 3) {
-        resultText.textContent = 'Goed gedaan! Blijf oefenen.';
-      } else {
-        resultText.textContent = 'Bekijk de vergelijking pagina voor meer voorbeelden.';
-      }
-    }, 500);
-  }
+];
+
+let current = 0;
+let score = 0;
+
+function startQuiz(){
+
+document.getElementById("start-screen").style.display = "none";
+
+document.getElementById("quiz-container").style.display = "block";
+
+showQuestion();
+
+}
+
+function showQuestion(){
+
+const q = quiz[current];
+
+document.getElementById("question-number").textContent =
+current + 1;
+
+document.getElementById("question-source").textContent =
+q.source;
+
+document.getElementById("question-title").textContent =
+q.title;
+
+document.getElementById("question-text").textContent =
+q.text;
+
+document.getElementById("feedback").style.display = "none";
+
+document.getElementById("next-btn").style.display = "none";
+
+}
+
+function answer(choice){
+
+const q = quiz[current];
+
+const feedback = document.getElementById("feedback");
+
+feedback.style.display = "block";
+
+if(choice === q.fake){
+
+score++;
+
+feedback.style.borderLeftColor = "#27ae60";
+
+feedback.innerHTML =
+"<strong>Goed!</strong><br>" + q.explanation;
+
+}
+
+else{
+
+feedback.style.borderLeftColor = "#e74c3c";
+
+feedback.innerHTML =
+"<strong>Fout.</strong><br>" + q.explanation;
+
+}
+
+document.getElementById("next-btn").style.display =
+"inline-block";
+
+}
+
+function nextQuestion(){
+
+current++;
+
+if(current < quiz.length){
+
+showQuestion();
+
+}
+
+else{
+
+showResult();
+
+}
+
+}
+
+function showResult(){
+
+document.querySelector("#quiz-container .info-card").style.display =
+"none";
+
+const result = document.getElementById("result");
+
+result.style.display = "block";
+
+document.getElementById("result-score").textContent =
+score + " / 5";
+
+if(score === 5){
+
+document.getElementById("result-text").textContent =
+"Perfect! Je herkent AI-nepnieuws uitstekend.";
+
+}
+
+else if(score >= 3){
+
+document.getElementById("result-text").textContent =
+"Goed gedaan! Je kunt nepnieuws vaak herkennen.";
+
+}
+
+else{
+
+document.getElementById("result-text").textContent =
+"Blijf kritisch en controleer altijd je bronnen.";
+
+}
+
 }
