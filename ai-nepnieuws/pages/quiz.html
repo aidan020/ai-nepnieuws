@@ -1,151 +1,117 @@
-<!DOCTYP<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz – AI Nepnieuws Info</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <title>Quiz - AI Nepnieuws Info</title>
+
   <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" style="text-decoration:none;">
-      <div class="logo-text">AI Nepnieuws Info</div>
-      <div class="logo-sub">Herken en begrijp AI desinformatie</div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="artikelen.html">Artikelen</a></li>
-      <li><a href="vergelijking.html">Vergelijking</a></li>
-      <li><a href="quiz.html" class="active">Quiz</a></li>
-    </ul>
-  </nav>
+<nav>
+  <a href="index.html" style="text-decoration:none;">
+    <div class="logo-text">AI Nepnieuws Info</div>
+    <div class="logo-sub">Herken en begrijp AI desinformatie</div>
+  </a>
 
-  <div class="page-header">
-    <h1>Test je kennis</h1>
-    <p>Kan jij echt nieuws onderscheiden van AI-gegenereerde desinformatie?</p>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="artikelen.html">Artikelen</a></li>
+    <li><a href="vergelijking.html">Vergelijking</a></li>
+    <li><a href="quiz.html" class="active">Quiz</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>Test je kennis</h1>
+  <p>Kan jij echt nieuws onderscheiden van AI-nepnieuws?</p>
+</div>
+
+<div class="section" id="start-screen">
+  <div class="info-card" style="text-align:center;padding:50px;">
+    <p>
+      Deze quiz bestaat uit 5 vragen.
+      Kies telkens: Echt nieuws of AI-nepnieuws.
+    </p>
+
+    <button class="btn-primary" onclick="startQuiz()">
+      Start Quiz
+    </button>
   </div>
+</div>
 
-  <div class="section">
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card" style="text-align: center; padding: 48px;">
-        <p style="font-size: 0.95rem; max-width: 500px; margin: 0 auto 24px;">Deze quiz bestaat uit 5 vragen. Bij elke vraag krijg je een kort nieuwsbericht te zien. Jij beslist: echt of nep?</p>
-        <button onclick="startQuiz()" class="btn-primary">Start Quiz</button>
-      </div>
-    </div>
-  </div>
+<div class="section" id="quiz-container" style="display:none;">
 
-  <div class="section" id="quiz-container" style="display: none;">
-    
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card">
-        <div class="card-number">Vraag 1 van 5</div>
-        <div style="margin-bottom: 16px; font-size: 0.75rem; color: var(--muted);">Bron: "GezondNieuws.nl" | 10 mei 2026</div>
-        <h3 style="font-size: 1rem; margin-bottom: 16px;">Revolutionair medicijn geneest diabetes type 2 in slechts 2 weken</h3>
-        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 24px;">Wetenschappers van een onbekend onderzoeksinstituut hebben een doorbraak gemeld. Het medicijn is al op mensen getest en werkt in 100% van de gevallen. Grote farmaceuten verbergen dit medicijn.</p>
-        <div style="display: grid; gap: 12px;">
-          <button onclick="checkAnswer(1, false)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">Echt nieuws</button>
-          <button onclick="checkAnswer(1, true)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">AI-nepnieuws</button>
-        </div>
-        <div id="feedback-1" style="display: none; margin-top: 20px; padding: 16px; border-left: 3px solid var(--red);">
-          <p style="font-size: 0.85rem;"><strong>Goed!</strong> Dit bevat klassieke signalen: onmogelijke claim, geen concrete bron, en een conspiratie.</p>
-        </div>
-      </div>
+  <div class="info-card" style="text-align:center;">
+
+    <div class="card-number">
+      Vraag <span id="question-number">1</span> van 5
     </div>
 
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card">
-        <div class="card-number">Vraag 2 van 5</div>
-        <div style="margin-bottom: 16px; font-size: 0.75rem; color: var(--muted);">Bron: Nu.nl | 11 mei 2026</div>
-        <h3 style="font-size: 1rem; margin-bottom: 16px;">Kabinet presenteert nieuw klimaatbeleid na maandenlang overleg</h3>
-        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 24px;">Het kabinet heeft woensdag na lang overleg een nieuw pakket klimaatmaatregelen gepresenteerd. Verschillende partijen zijn kritisch. Een exacte datum voor invoering is nog niet bekend.</p>
-        <div style="display: grid; gap: 12px;">
-          <button onclick="checkAnswer(2, true)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">Echt nieuws</button>
-          <button onclick="checkAnswer(2, false)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">AI-nepnieuws</button>
-        </div>
-        <div id="feedback-2" style="display: none; margin-top: 20px; padding: 16px; border-left: 3px solid var(--red);">
-          <p style="font-size: 0.85rem;"><strong>Goed!</strong> Dit is echt nieuws: concrete bron, genuanceerde toon, en open-ended.</p>
-        </div>
-      </div>
+    <div id="question-source"
+      style="margin:15px 0;color:var(--muted);font-size:0.8rem;">
     </div>
 
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card">
-        <div class="card-number">Vraag 3 van 5</div>
-        <div style="margin-bottom: 16px; font-size: 0.75rem; color: var(--muted);">Bron: @PolitiekAlert | 12 mei 2026</div>
-        <h3 style="font-size: 1rem; margin-bottom: 16px;">EXCLUSIEF: Minister toegeving in gelekte audio - we wisten al jaren van probleem</h3>
-        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 24px;">In een gelekte audio-opname is de minister te horen die toegeeft dat het kabinet al jaren wist van het probleem. Dit IS het bewijs dat ze hebben gelogen. Deel dit zodat iedereen het weet!!!</p>
-        <div style="display: grid; gap: 12px;">
-          <button onclick="checkAnswer(3, false)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">Echt nieuws</button>
-          <button onclick="checkAnswer(3, true)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">AI-nepnieuws</button>
-        </div>
-        <div id="feedback-3" style="display: none; margin-top: 20px; padding: 16px; border-left: 3px solid var(--red);">
-          <p style="font-size: 0.85rem;"><strong>Goed!</strong> Sociale media desinformatie: "EXCLUSIEF", alarmistische woorden, geen verificatie.</p>
-        </div>
-      </div>
+    <h3 id="question-title"></h3>
+
+    <p id="question-text"
+      style="margin:20px 0;color:var(--muted);">
+    </p>
+
+    <div style="display:grid;gap:12px;">
+
+      <button class="btn-primary" onclick="answer(false)">
+        Echt nieuws
+      </button>
+
+      <button class="btn-primary" onclick="answer(true)">
+        AI-nepnieuws
+      </button>
+
     </div>
 
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card">
-        <div class="card-number">Vraag 4 van 5</div>
-        <div style="margin-bottom: 16px; font-size: 0.75rem; color: var(--muted);">Bron: NOS | 13 mei 2026</div>
-        <h3 style="font-size: 1rem; margin-bottom: 16px;">Nieuwe wetgeving pandemiebescherming in behandeling Tweede Kamer</h3>
-        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 24px;">De Tweede Kamer begint donderdag met de behandeling van nieuwe wetgeving rond pandemiemaatregelen. Deskundigen zijn verdeeld over de voorstellen. Een beslissing wordt eind juni verwacht.</p>
-        <div style="display: grid; gap: 12px;">
-          <button onclick="checkAnswer(4, true)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">Echt nieuws</button>
-          <button onclick="checkAnswer(4, false)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">AI-nepnieuws</button>
-        </div>
-        <div id="feedback-4" style="display: none; margin-top: 20px; padding: 16px; border-left: 3px solid var(--red);">
-          <p style="font-size: 0.85rem;"><strong>Goed!</strong> Echt nieuws: NOS als betrouwbare bron, genuanceerd, concrete tijdslijn.</p>
-        </div>
-      </div>
+    <div id="feedback"
+      style="
+      display:none;
+      margin-top:20px;
+      padding:16px;
+      border-left:4px solid #27ae60;">
     </div>
 
-    <div class="cards-grid" style="grid-template-columns: 1fr;">
-      <div class="info-card">
-        <div class="card-number">Vraag 5 van 5</div>
-        <div style="margin-bottom: 16px; font-size: 0.75rem; color: var(--muted);">Bron: "WetenschapDaily.com" | 14 mei 2026</div>
-        <h3 style="font-size: 1rem; margin-bottom: 16px;">SHOCKING: Wetenschappers ontdekken dat alle Covid-vaccins nu al NIET meer werken</h3>
-        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 24px;">Een nieuwe studie toont aan dat alle Covid-vaccins vanaf nu volledig ineffectief zijn. De overheid verbergt dit voor de bevolking. Dit is het grootste schandaal ooit in de medische geschiedenis.</p>
-        <div style="display: grid; gap: 12px;">
-          <button onclick="checkAnswer(5, false)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">Echt nieuws</button>
-          <button onclick="checkAnswer(5, true)" style="padding: 16px; border: 1px solid var(--border); background: var(--card-bg); text-align: left; cursor: pointer; font-size: 0.85rem;">AI-nepnieuws</button>
-        </div>
-        <div id="feedback-5" style="display: none; margin-top: 20px; padding: 16px; border-left: 3px solid var(--red);">
-          <p style="font-size: 0.85rem;"><strong>Goed!</strong> Alarmistische taal, onbetrouwbare bron, conspiracy element.</p>
-        </div>
-      </div>
-    </div>
+    <button
+      id="next-btn"
+      class="btn-primary"
+      onclick="nextQuestion()"
+      style="display:none;margin-top:20px;">
 
-    <div class="section" id="result" style="display: none;">
-      <div class="cards-grid" style="grid-template-columns: 1fr;">
-        <div class="info-card" style="text-align: center; padding: 48px;">
-          <div class="card-number">Resultaat</div>
-          <h2 id="result-score" style="font-family: 'Syne', sans-serif; font-size: 2rem; margin: 20px 0;"></h2>
-          <p id="result-text" style="font-size: 0.9rem; max-width: 400px; margin: 0 auto 24px;"></p>
-          <button onclick="location.reload()" class="btn-primary">Opnieuw</button>
-        </div>
-      </div>
-    </div>
+      Volgende vraag
+
+    </button>
 
   </div>
 
-  <footer>
-    © 2026 AI Nepnieuws Monitor — Educatieve informatiebron
-  </footer>
+  <div class="info-card"
+    id="result"
+    style="display:none;text-align:center;margin-top:30px;">
 
-  <script src="../js/quiz.js"></script>
+    <h2 id="result-score"></h2>
 
-</body>
-</html>E html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+    <p id="result-text"></p>
+
+    <button class="btn-primary" onclick="location.reload()">
+      Opnieuw spelen
+    </button>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 AI Nepnieuws Monitor — Educatieve informatiebron
+</footer>
+
+<script src="filter.js"></script>
+
 </body>
 </html>
