@@ -1,3 +1,11 @@
+/*
+Theme Name: AI Nepnieuws Info
+Theme URI: https://voorbeeld.nl
+Author: Aidan
+Description: Thema voor AI Nepnieuws Info
+Version: 1.0
+*/
+
 :root {
   --red: #d63031;
   --dark: #1a1a2e;
@@ -57,6 +65,10 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active { color: var(--text); }
+
+a {
+  color: inherit;
+}
 
 .hero {
   max-width: 1280px;
@@ -285,9 +297,6 @@ nav {
 }
 
 .article-card:hover { background: var(--bg); }
-
-
-.article-card:hover::after { width: 100%; }
 
 .article-thumb {
   width: 100%;
